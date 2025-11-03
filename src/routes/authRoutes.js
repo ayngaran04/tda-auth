@@ -30,7 +30,7 @@ router.post('/register', async(req, res) => {
             }
         })
 
-        //token
+        //token-rate
         const token = jwt.sign({id: user.id},process.env.JWT_SECRET,{expiresIn:'24h'})
         res.json({token})
 
